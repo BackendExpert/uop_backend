@@ -23,7 +23,5 @@
         $insert_stmt->execute([$username, $email, $password]);
 
         echo json_encode(["message" => "User registered successfully"]);
-    }
-    
-
+    }    
 ?>
