@@ -19,7 +19,7 @@
         echo json_encode(["message" => "User Already in Database", "status" => false]);
     }
     else{
-        $insert_stmt = $pdo->prepare("INSERT INTO users (username, email, password) (?,?,?)");
+        $insert_stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (?,?,?)");
         $insert_stmt->execute([$username, $email, $password]);
 
         echo json_encode(["message" => "User registered successfully"]);
