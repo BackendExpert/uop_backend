@@ -22,7 +22,7 @@
     if ($user && password_verify($password, $user['password'])) {
         $payload = [
             "id" => $user['id'],
-            "username" => $user['username'],
+            "email" => $user['email'],
             "exp" => time() + (60 * 60 * 24) 
         ];
         
